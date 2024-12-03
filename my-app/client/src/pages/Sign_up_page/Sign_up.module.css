@@ -1,0 +1,100 @@
+/*============= Wrapper ===============*/
+.wrapper {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 400px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.712);
+    outline: white 1px solid;
+    box-shadow: 2px 0px 10px rgba(128, 128, 128, 0.662);
+    text-align: center;
+}
+
+/*============= Login headline ===============*/
+h1 {
+    margin-bottom: 60px;
+    font-size: 3rem;
+    color: rgb(200,200,200);
+}
+
+/*============= Input Boxes ===============*/
+.inputBox {
+    position: relative;
+    height: 60px;
+    width: 400px; /* Match the width of the form */
+    margin-bottom: 15px;
+}
+
+.inputBox input {
+    box-sizing: border-box; /* Include padding and border in the total width */
+    padding: 10px;
+    width: 100%;
+
+    border: 1px solid rgb(200,200,200); /* Light border for visibility */
+    border-radius: 0;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.14); /* Match the form background */
+
+    font-size: 1rem;
+    color: rgb(220,220,220);
+}
+
+.inputBox input::placeholder {
+    color: rgb(200,200,200);
+}
+
+/*============= Sign Up btn ===============*/
+.signUpBtn {
+    width: 401.6px; /* Ensure this matches the form width */
+    padding: 12px 0px;
+    margin-left: 0px;
+
+    background: rgb(255, 0, 55);
+    border: none;
+    border-radius: 0;
+    
+    color: white;
+    font-size: 1rem;
+
+    transition: 
+        background-color 0.3s ease, /* Smooth transition for background */
+        transform 0.2s ease, /* Smooth scaling transition */
+        color 0.3s ease; /* Smooth transition for text color */
+    display: inline-block; /* Ensures the button behaves like an inline block for alignment */
+    text-align: center; /* Centers the text horizontally */
+    line-height: 1; /* Ensures the text stays vertically centered */
+    will-change: transform, background-color, color; /* Optimize transitions */
+
+    cursor: pointer;
+}
+
+.signUpBtn:hover {
+    transform: scale(1.02); /* Slight scaling for emphasis */
+    color: rgb(255, 255, 255); /* White text on hover */
+}
+
+.signUpBtn:active {
+    background-color: rgba(255, 0, 55, 0.8); /* Darker red on click */
+    transform: scale(0.98); /* Slightly smaller when clicked */
+}
+
+/*============= Input invalid alert + Errors ===============*/
+.invalidAlert {
+    border: rgb(255, 0, 55) solid 1.5px !important;
+}
+
+.error {
+    margin: 0;
+    margin-top: 2px;
+    
+    text-align: left;
+    font-size: 14px;
+    color: rgba(255, 0, 55, 0.9);
+}

@@ -1,0 +1,43 @@
+.workoutsList .header {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: rgb(240,240,240);
+    text-align: left;
+    font-weight: lighter;
+}
+
+.workoutsList .headerElaboration {
+    color: rgb(200, 200, 200);
+    font-size: 16px;
+    line-height: 30px;
+    width: 75%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.workoutsList .list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;           /* Removes default padding */
+    margin: 0;            /* Removes default margin */
+}
+
+.workoutsList .list li {
+    display: block;
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly darker background */
+    border-radius: 8px;   /* Rounded corners for a softer look */
+    padding: 12px 20px;   /* Increased padding for comfort */
+    margin-bottom: 12px;  /* Space between items */
+    color: white;         /* White text color */
+    font-size: 1.2rem;    /* Larger font size for better readability */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth effects */
+}
+
+.workoutsList .list li:hover {
+    background-color: rgba(255, 255, 255, 0.25); /* Highlight on hover */
+    cursor: grab;      /* Change cursor to grab on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}

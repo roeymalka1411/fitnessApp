@@ -1,0 +1,128 @@
+/*** general styles ***/
+/*** main header ***/
+ .mainHeader {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: rgb(240,240,240);
+    text-align: left;
+    font-weight: lighter;
+}
+
+/*** calendar section ***/
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.calendar {
+    width: 100%;
+    max-width: 100%; /* Set to a quarter of the viewport width */
+    padding: 10px 8px; /* Reduced padding */
+    background-color: rgba(50, 50, 50, 0.7);
+    border: gray solid 0.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: rgb(204, 204, 204);
+}
+
+.calendar .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(204, 204, 204);
+}
+
+.calendar .header .month {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem; /* Adjusted for smaller layout */
+}
+
+.calendar .header .btns {
+    display: flex;
+    gap: 5px;
+}
+
+.calendar .header .btns .btnToday,
+.calendar .header .btns .btnPrev,
+.calendar .header .btns .btnNext {
+    background-color: transparent;
+    transition: background-color 0.15s;
+    border: none;
+    padding: 5px;
+    border-radius: 40px;
+    color: rgb(204, 204, 204);
+}
+
+.calendar .header .btns .btnToday:hover,
+.calendar .header .btns .btnPrev:hover,
+.calendar .header .btns .btnNext:hover {
+    background-color: rgb(255, 0, 55, 0.85);
+    cursor: pointer;
+    color: black;
+}
+
+/*** days grid section ***/
+.daysGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+    font-weight: lighter;
+    padding-left: 0px;
+}
+
+.daysGrid li {
+    background-color: rgb(255, 0, 55);
+    padding: 5px;
+    border-radius: 0px;
+    text-align: center;
+    color: rgb(240, 240, 240);
+    list-style-type: none;
+    position: relative;
+}
+
+.daysGrid .dayNumber {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 0.75em;
+    font-weight: lighter    ;
+    color: rgb(204, 204, 204);
+}
+
+.daysGrid li:not(:nth-child(-n+7)) {  /* everything beside the week days row */
+    background-color: rgba(60, 60, 60, 0.6);
+    height: 50px;
+}
+
+.daysGrid li.emptyCells {
+    background-color: rgba(123, 123, 123, 0.3);
+    height: 50px;
+}
+
+.daysGrid .actualDays:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+/* Updated workout name styles */
+.workoutName {
+    margin: 0;
+    text-align: center; /* Center align the text */
+    font-size: 0.9em; /* Use a smaller font size for the workout name */
+    font-weight: lighter;
+    color: rgb(240, 240, 240); /* Ensure it matches the day text color */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
