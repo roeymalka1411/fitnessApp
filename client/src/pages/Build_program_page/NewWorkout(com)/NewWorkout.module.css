@@ -1,0 +1,243 @@
+/*============= Workout Table ===============*/
+.workoutContainer {
+    margin: 0;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    background-color: rgba(90, 90, 90, 0.3);
+    backdrop-filter: blur(3px);
+    position: relative;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.workoutTable {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 60px;
+    margin-top: 15px;
+}
+
+/* Media query for responsive adjustments */
+@media (min-width: 600px) {
+    .pageContainer {
+        flex-direction: row; /* Side-by-side on larger screens */
+    }
+    .leftSide,
+    .rightSide {
+        width: 50%; /* Each side takes up half of the container */
+    }
+}
+
+.workoutTable th,
+.workoutTable td {
+    padding: 8px 10px;
+    text-align: center;
+    border: 1px solid white;
+    width: 20%;
+}
+
+/* Table Header */
+.workoutTable th {
+    background-color: transparent;
+    color: white;
+    font-weight: lighter;
+    font-size: 14px; 
+}
+
+@media (max-width: 600px) {
+    .workoutTable th,
+    .workoutTable td {
+        padding: 6px 8px; /* Further reduce padding */
+        font-size: 12px; /* Smaller font size for compact view */
+    }
+}
+
+/* Table Data Cells */
+.workoutTable td {
+    font-size: 14px; /* Decreased font size for better fit */
+}
+
+/* Table Rows */
+.workoutTable tbody tr {
+    background-color: transparent;
+}
+
+/* Table Inputs */
+.workoutTable tbody tr td input {
+    width: 60%; /* Set the width to 90% */
+    padding: 8px;
+    margin: 0; /* Remove margin to avoid overflow */
+    border: 0.5px solid white;
+    background-color: transparent;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 14px;
+}
+
+/* Input Placeholder Styling */
+.workoutTable tbody tr td input::placeholder {
+    color: rgba(255, 255, 255, 0.737); /* Slight transparency for placeholder text */
+}
+
+/* Input Focus State: No Effect */
+.workoutTable tbody tr td input:focus {
+    outline: none; /* Prevent any visual effect when focused */
+}
+
+.workoutTable tbody tr .savedExerciseRowData{
+    color: white;
+    font-size: 14px;
+}
+
+/*=== Header Part ===*/
+.headerSection {
+    display: flex;
+    align-items: center;  /* Vertically center the items */
+    gap: 10px;            /* Space between the items */
+    margin-bottom: 10px;
+}
+
+.headerSection .workoutHeader { /* where written "Workout Name" */
+    font-style: italic;
+    font-size: 24px;          /* Slightly smaller font size */
+    font-weight: lighter;
+    color: rgb(164, 164, 164);
+    margin: 0;                
+}
+
+.headerSection .workoutName { /* "input saved result" */
+    font-style: italic;
+    font-size: 24px;          /* Slightly smaller font size */
+    font-weight: lighter;
+    color: rgb(164, 164, 164);
+}
+
+.headerSection input {
+    height: 30px;             /* Increase height for better usability */
+    font-size: 18px;          /* Adjust font size for readability */
+    padding: 5px;             /* Add padding for better appearance */
+    border: 1px solid white;   /* Add a border */
+    background-color: transparent;
+    color: white;
+}
+
+.headerSection input:focus{
+    outline: none;
+}
+
+.headerSection button{
+    margin-left: 0;
+}
+
+/*=== Action Buttons ===*/
+/* exercise Buttons */
+.removeExerciseBtn, .saveExerciseBtn, .editExerciseBtn {
+    cursor: pointer;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    border: 0.5px solid white;
+    font-size: 12px;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(90, 90, 90, 0.3);
+    line-height: 30px;
+}
+
+.editExerciseBtn, .saveExerciseBtn {
+    margin-right: 5px; /* adding space between action buttons. */
+}
+
+.removeExerciseBtn:hover{
+    background-color: rgb(255, 0, 55);
+}
+
+.saveExerciseBtn:hover{
+    background-color: lightgreen;
+}
+
+.editExerciseBtn:hover{
+    background-color:  lightsalmon;
+
+}
+
+/*=== addSaveCloseDiv ===*/
+.addSaveClose {
+    display: flex;               /* Use flexbox for layout */
+    justify-content: center;     /* Center items horizontally */
+    align-items: center;         /* Center items vertically */
+    position: absolute;
+    bottom: 10px;
+    width: 95%;
+}
+
+.addExerciseBtn,
+.saveWorkoutBtn,
+.closeWorkoutBtn {
+    margin: 10px;               /* Add space around buttons */
+    margin-bottom: 0px;
+    background-color: hsl(347, 100%, 50%);
+    padding: 8px 12px;
+    width: 140px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.saveWorkoutBtn{ background-color: rgba(120,120,120,0.36)}
+.closeWorkoutBtn{ background-color: black}
+
+.addExerciseBtn:hover,
+.saveWorkoutBtn:hover,
+.closeWorkoutBtn:hover {
+    transform: scale(1.02);      /* Slightly enlarge on hover */
+}
+
+.addExerciseBtn:active,
+.saveWorkoutBtn:active,
+.closeWorkoutBtn:active {
+    transform: scale(0.98);      /* Slightly shrink on active */
+}
+
+/*=== create workout table btn (+) ===*/
+.createWorkoutContainer {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+}
+
+.createWorkoutBtn {
+    margin: 20px auto;
+    height: 100px;
+    width: 100px;
+    padding: 10px 20px;
+    font-size: 3rem;
+    background-color: rgb(255, 0, 55);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.createWorkoutBtn:hover {
+    transform: scale(1.05);
+}
+
+.createWorkoutBtn:active {
+    transform: scale(0.95);
+}

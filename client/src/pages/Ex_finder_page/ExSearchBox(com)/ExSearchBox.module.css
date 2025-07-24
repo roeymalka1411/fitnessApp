@@ -1,0 +1,145 @@
+/*============= Exercises Searcher Collection ===============*/
+/*============= Main Header ===============*/
+.exerciseCollection .header {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: rgb(240,240,240);
+    text-align: left;
+    font-weight: lighter;
+}
+
+.exerciseCollection .headerElaboration {
+    color: rgb(200, 200, 200);
+    font-size: 16px;
+    line-height: 30px;
+    width: 75%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+/*============= Search Wrapper ===============*/
+.exerciseCollection .searchWrapper {
+    display: flex;
+    flex-direction: row; /* Align input and button in a row */
+    width: 80%; /* Adjust the wrapper width */
+    gap: 5px; /* Space between input and button */
+    align-items: center; /* Align vertically centered */
+    margin: 0;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.exerciseCollection .searchWrapper .inputBox {
+    flex-grow: 1; /* Allows input box to take up available space */
+    width: auto;
+    padding: 10px;
+    border: 1.5px solid rgb(180,180,180);
+    border-radius: 0;
+    background: rgba(120, 120, 120, 0.36);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    color: rgb(220, 220, 220);
+}
+
+.exerciseCollection .searchWrapper .inputBox:focus{
+    outline: none; /* Removes the default focus outline */
+    border: 1.5px solid rgb(180, 180, 180); /* Keeps the border as is */
+    background: rgba(120, 120, 120, 0.36); /* Keeps the background as is */
+}
+
+.exerciseCollection .searchWrapper input::placeholder {
+    color: rgb(180, 180, 180);
+}
+
+/*== Suggestion List ==*/
+.exerciseCollection .suggestionList {
+    position: absolute;
+    top: 100%; /* Position directly below the input */
+    left: 0;
+    width: 100%; /* Match input width */
+    z-index: 1000;
+    background: rgba(50, 50, 50, 0.85);
+    border: 1px solid rgba(80, 80, 80, 0.7);
+    max-height: 150px;
+    overflow-y: auto;
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0 0 0; /* Remove margin-top if needed */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+}
+
+.exerciseCollection .suggestionList:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6); /* Slightly stronger shadow on hover */
+}
+
+/*== Custom scrollbar styling ==*/
+.exerciseCollection .suggestionList::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.exerciseCollection .suggestionList::-webkit-scrollbar-track {
+    background: rgba(60, 60, 60, 0.3); /* Slightly lighter dark background */
+    border-radius: 10px; /* Rounded corners for the scrollbar track */
+    margin: 5px 0; /* Adds some spacing around the scrollbar */
+}
+
+.exerciseCollection .suggestionList::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90, 0.7); /* Darker thumb with some transparency */
+    border-radius: 10px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.exerciseCollection .suggestionList::-webkit-scrollbar-thumb:hover {
+    background: rgba(150, 150, 150, 0.9); /* Lighter color when hovering */
+}
+
+/*== Suggestion Item ==*/
+.exerciseCollection .suggestionItem {
+    padding: 10px;
+    cursor: pointer;
+    color: rgb(220, 220, 220); /* Light color for text */
+    transition: background-color 0.3s ease, padding 0.2s ease; /* Smooth transitions for hover */
+    border-bottom: 1px solid rgba(80, 80, 80, 0.5); /* Thin border to separate items */
+}
+
+.exerciseCollection .suggestionItem:hover {
+    background-color: rgb(255, 0, 55); /* Red background on hover */
+    color: white; /* White text on hover for contrast */
+    padding-left: 15px; /* Slight padding shift on hover for interaction */
+}
+
+/*== Search Button ==*/
+.exerciseCollection .searchWrapper .searchBtn {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(39, 39, 39);
+    color: rgb(220, 220, 220);
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1.5px solid rgb(180,180,180);
+    border-radius: 0;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    text-align: center;
+    will-change: transform, background-color, color;
+}
+
+.exerciseCollection .searchWrapper .searchBtn:focus {
+    outline: none; /* Removes the default focus outline */
+    background-color: rgb(39, 39, 39);
+}
+
+.exerciseCollection .searchWrapper .searchBtn:hover {
+    background-color: rgb(255, 0, 55); /* Bright red background on hover */
+    transform: scale(1.05); /* Slight scaling for emphasis */
+    color: rgb(255, 255, 255); /* White text on hover */
+}
+
+.exerciseCollection .searchWrapper .searchBtn:active {
+    background-color: rgba(255, 0, 55, 0.8); /* Darker red on click */
+    transform: scale(0.95); /* Slightly smaller when clicked */
+    color: rgb(220, 220, 220); /* Reset to original text color when clicked */
+}

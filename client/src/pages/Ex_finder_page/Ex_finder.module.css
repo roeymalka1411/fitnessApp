@@ -1,0 +1,21 @@
+.pageContainer {
+    display: flex;
+    width: 100%;
+    gap: 20px; /* Space between left and right sides */
+    margin-top: 20px;
+}
+
+.leftSide,
+.rightSide {
+    width: 50%; /* Each side takes up half of the container */
+}
+
+/* Optional additional styling */
+.leftSide {
+    text-align: left;
+    margin-left: 25px;
+}
+
+.rightSide {
+    margin-right: 25px;
+}

@@ -1,0 +1,65 @@
+/*============= Left Side ===============*/
+.leftSide {
+    margin-left: 25px;
+    width: 50%;
+    height: 100%;
+    font-style: italic;
+    list-style-type: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the top */
+    justify-content: flex-start; /* No centering, pushed up */
+}
+
+/*== First Line ==*/
+.firstLine {
+    margin-top: 25px;
+    font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 0.7px rgb(200, 200, 200); /* outlined text */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.firstLine span {
+    color: rgb(255, 0, 55);
+    -webkit-text-stroke: 0;
+    font-weight: bold;
+}
+
+/*== Second Line ==*/
+.secondLine {
+    color: rgb(200, 200, 200);
+    font-size: 20px;
+    line-height: 30px;
+    width: 75%;
+    margin-top: 0px;
+    margin-bottom: 150px;
+}
+
+/*== Third Line ==*/
+.thirdLine {
+    font-size: 35px;
+    color: rgb(200, 200, 200);
+    margin-bottom: 25px;
+}
+
+/*== Register Button ==*/
+.registerBtn {
+    margin-top: 0px;
+    padding: 12px 20px; /* Slightly larger padding for a better button size */
+    color: white;
+    border: none;
+    border-radius: 0;
+    background-color: rgb(255, 0, 55); 
+    transition: background-color 0.3s, transform 0.15s ease-in-out;
+    font-size: 20px;
+}
+
+.registerBtn:hover {
+    color: black;
+    cursor: pointer;
+    transform: scale(1.05); /* Slightly larger scaling for more impact */
+}
+
