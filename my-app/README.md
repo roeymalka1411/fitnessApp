@@ -12,25 +12,25 @@ A React-based fitness application that allows users to register, browse exercise
 ## Screenshots
 
 ### Home Page  
-![Home Page](./client/images/Home.png)
+![Home Page](./screenshots/Home.png)
 
 ### Registration Form  
-![Registration](./client/images/Register.png)
+![Registration](./screenshots/Register.png)
 
 ### Login Form  
-![Login](./client/images/Login.png)
+![Login](./screenshots/Login.png)
 
 ### Build Program List  
-![Build Program](./client/images/Build_program.png)
+![Build Program](./screenshots/Build_program.png)
 
 ### My Program List  
-![My Program](./client/images/My_program.png)
+![My Program](./screenshots/My_program.png)
 
 ### Exercise Searcher  
-![Exercise_tab](./client/images/Exercise_searcher.png)
+![Exercise_tab](./screenshots/Exercise_searcher.png)
 
 ### Exercise Tab  
-![Exercise_tab](./client/images/Exercise_tab.png)
+![Exercise_tab](./screenshots/Exercise_tab.png)
 
 ## Installation
 
