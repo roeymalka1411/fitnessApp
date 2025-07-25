@@ -1,0 +1,12 @@
+body {
+    margin: 0px; /* Remove default margin */
+    margin-bottom: 20px;
+    padding: 0;
+    background-image: url("gymwallpaper.jpg");
+    background-size: cover; /* Scale the image to cover the entire area */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fix the background image and prevent its size to change when the size of the page changes */
+    
+    font-family: arial;
+}

@@ -1,0 +1,125 @@
+.mainHeader {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.5rem;
+    text-decoration: underline rgb(255, 0, 55);
+    text-underline-offset: 10px; /* Adjust the gap between the text and the underline */
+    color: rgb(240, 240, 240);
+    text-align: center;
+
+    z-index: 1;
+    backdrop-filter: blur(2px); /* Apply blur to the background inside the border */
+    background: rgba(42, 42, 42, 0.044); /* Optional: Add a translucent background color */
+    border-radius: 10px;
+}
+
+.backBtn {
+    margin: 0 auto; /* Horizontally center the button */
+    margin-bottom: 10px;
+    display: block; /* Set to block for centering */
+    background-color: hsl(347, 100%, 50%);
+    padding: 8px 12px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.backBtn:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    cursor: pointer;
+}
+
+
+.backBtn:active {
+    transform: scale(0.98); /* Slightly enlarge on hover */
+}
+
+.ButtonsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, max-content); /* Adjust to fit content without stretching */
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Align buttons in the middle vertically */
+    padding: 0 25px; /* Ensure 25px margin from page edges */
+    max-width: calc(100% - 50px); /* Limit the width to 100% minus 50px for 25px padding on each side */
+}
+
+.categoryBtn {
+    width: 270px; /* Reduce button width */
+    height: 120px; /* Adjust button height */
+    font-size: 30px; /* Adjust font size */
+    font-style: italic;
+    color: rgb(220, 220, 220);
+    background: rgba(120, 120, 120, 0.36);
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.categoryBtn:hover {
+    background-color: rgb(220, 220, 220, 0.9);
+    color: hsl(0, 0%, 30%);
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.categoryBtn:active {
+    transform: scale(0.98)
+}
+
+.listHeader{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin: 0 0 20px 25px;
+    text-align: left;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: lighter;
+    color: rgb(164, 164, 164);
+}
+
+.listContainer{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr); /* Adjust to fit content without stretching */
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Align buttons in the middle vertically */
+    max-width: calc(100% - 50px); /* Limit the width to 100% minus 50px for 25px padding on each side */
+    margin: 0 25px;
+    padding: 0;
+}
+
+.exerciseItem{
+    width: 150px;
+    height: 45px;
+    color: rgb(220, 220, 220);
+    background: rgba(120, 120, 120, 0.36);
+    margin: 5px; /* Center the container horizontally */
+    border-radius: 5px;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+    align-content: center;
+    justify-content: center;
+    list-style-type: none;
+    font-size: 13px;
+    text-align: center; 
+}
+
+.exerciseItem:hover
+{
+    background-color: rgb(220, 220, 220, 0.9);
+    color: hsl(0, 0%, 30%);
+    transform: scale(1.05);
+    cursor: default;
+}
+

@@ -1,0 +1,113 @@
+/*============= Page split ===============*/
+.pageContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    margin-top: 20px;
+    
+}   
+
+.leftSide,
+.rightSide {
+    width: 50%; /* Default to full width */
+}
+
+/* Optional additional styling */
+.leftSide {
+    text-align: left;
+    margin: 0 25px;
+}
+
+.rightSide {
+    margin: 0 25px;
+    box-sizing: border-box;
+}
+
+/*============= Left Side ===============*/
+.leftSide .header {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: rgb(240,240,240);
+    text-align: left;
+    font-weight: lighter;
+}
+
+.leftSide .headerElaboration {
+    color: rgb(200, 200, 200);
+    font-size: 16px;
+    line-height: 30px;
+    width: 75%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+/*============= Guideline Container ===============*/
+.GuidelineContainer {
+    background-color: rgba(50, 50, 50, 0.7); /* Darker semi-transparent background */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0px 30px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    border: 3px dashed #fff; /* Bold dashed border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    max-width: 600px; /* Control width for better layout */
+    color: #ddd;
+    display: flex; /* Flexbox for centering */
+    flex-direction: column; /* Vertical stacking */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    text-align: center;
+}
+
+.GuidelineContainer h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: #f5f5f5;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+    padding-bottom: 5px;
+}
+
+.GuidelineContainer ul {
+    margin: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    list-style-type: none;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.3;
+    width: 100%;
+}
+
+.GuidelineContainer ul li {
+    flex: 1 1 calc(33.33% - 10px); /* 3 items per row with spacing */
+    margin: 0;
+    padding: 5px;
+    border-left: 3px solid rgb(255, 0, 55);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    text-align: left;
+    font-size: 13px;
+}
+
+.GuidelineContainer ul li:hover {
+    background-color: rgba(255, 0, 55, 0.2); /* Highlight on hover */
+}
+
+.GuidelineContainer ul li span {
+    font-weight: lighter;
+    font-size: 14px;
+    color: rgb(255, 0, 55); /* Stronger contrast for important text */
+}
+
+
